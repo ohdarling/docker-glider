@@ -2,7 +2,7 @@
 #versison of container: 0.1.0
 FROM ubuntu:16.04
 
-RUN add-apt-repository ppa:longsleep/golang-backports && apt update && apt-get install golang-go
+RUN apt-get install software-properties-common && add-apt-repository ppa:longsleep/golang-backports && apt update && apt-get install golang-go
 
 RUN /usr/lib/go-1.9/bin/go get -u github.com/nadoo/glider
 
